@@ -5,7 +5,7 @@
     <br />
     <button @click="$emit('addHandle', 1)">+</button>
     <hr />
-    <Child @handle="handle"></Child>
+    <Child @handle="handle" />
   </div>
 </template>
 
@@ -13,7 +13,7 @@
 import $bus from '../util';
 import Child from './Child.vue';
 const emit = defineEmits(['addHandle']);
-const handle = val => {
+const handle = (val) => {
   emit('addHandle', val);
 };
 </script>

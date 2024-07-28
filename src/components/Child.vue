@@ -22,6 +22,7 @@ const validateImageUrl = () => {
     console.log('Invalid image URL');
   }
 };
+console.log(validateImageUrl);
 </script>
 
 <style lang="scss" scoped></style>
