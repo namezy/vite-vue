@@ -6,17 +6,17 @@ import $bus from './util';
 // import HelloWorld from './components/HelloWorld.vue'
 const count = ref(1);
 $bus.on('add', (val) => {
-  count.value += val;
+    count.value += val;
 });
 const addHandle = (val) => {
-  count.value += val;
+    count.value += val;
 };
 </script>
 
 <template>
-  <div>{{ count }}</div>
-  <!-- <HelloWorld msg="Vite + Vue" /> -->
-  <Parent @add-handle="addHandle" />
+    <div>{{ count }}</div>
+    <!-- <HelloWorld msg="Vite + Vue" /> -->
+    <Parent @add-handle="addHandle" />
 </template>
 
 <style scoped></style>
