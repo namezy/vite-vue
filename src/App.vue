@@ -17,6 +17,8 @@ const b = 2;
 console.log(b);
 const c = 3;
 console.log(c);
+const d = 4;
+console.log(d);
 </script>
 
 <template>
