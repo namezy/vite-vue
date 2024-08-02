@@ -22,6 +22,24 @@ console.log(d);
 
 console.log(1111);
 console.log(2222);
+let timer = null;
+const debounce = (fn, delay) => {
+    if (timer) {
+        clearTimeout(timer);
+    }
+    timer = setTimeout(() => {
+        fn();
+    }, delay);
+};
+const throttle = (fn, delay) => {
+    if (timer) {
+        return;
+    }
+    timer = setTimeout(() => {
+        fn();
+        timer = null;
+    }, delay);
+};
 </script>
 
 <template>
