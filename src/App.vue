@@ -11,6 +11,24 @@ $bus.on('add', val => {
 const addHandle = val => {
   count.value += val;
 };
+let timer = null;
+const debounce = (fn, delay) => {
+  if (timer) {
+    clearTimeout(timer);
+  }
+  timer = setTimeout(() => {
+    fn();
+  }, delay);
+};
+const throttle = (fn, delay) => {
+  if (timer) {
+    return;
+  }
+  timer = setTimeout(() => {
+    fn();
+    timer = null;
+  }, delay);
+};
 </script>
 
 <template>
