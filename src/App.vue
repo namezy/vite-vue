@@ -11,6 +11,8 @@ $bus.on('add', (val) => {
 const addHandle = (val) => {
     count.value += val;
 };
+const a = 1;
+console.log(a);
 </script>
 
 <template>
